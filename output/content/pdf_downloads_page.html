@@ -122,41 +122,6 @@
         <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-600">Download Library</p>
         <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Choose a model family guide</h2>
         <p class="mt-4 text-lg leading-8 text-slate-600">Each PDF is a concise decision guide that explains model options, best-fit use cases, and practical selection guidance.</p>
-        <div class="mt-8 rounded-[2rem] border border-violet-100 bg-violet-50 p-6">
-          <h3 class="text-xl font-semibold text-slate-900">Request selected PDFs</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600">Select the PDF guides you are interested in, enter your email, and send the request to DataKnobs. This version opens the visitor’s email client so you receive a lead/interest email before sharing the files.</p>
-          <form id="pdf-interest-form" class="mt-5 space-y-5">
-            <fieldset>
-              <legend class="mb-3 text-sm font-semibold text-slate-900">Select PDF guides</legend>
-              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="OpenAI Models Guide" data-url="openai-models.pdf" /> OpenAI</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Claude Models Guide" data-url="anthropic-models.pdf" /> Claude</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Gemini Models Guide" data-url="gemini-models.pdf" /> Gemini</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Meta AI Models Guide" data-url="meta-models.pdf" /> Meta AI</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Mistral Models Guide" data-url="mistral-models.pdf" /> Mistral</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Alibaba Qwen Models Guide" data-url="alibaba-models.pdf" /> Alibaba Qwen</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="xAI Grok Models Guide" data-url="xai-models.pdf" /> xAI Grok</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Sarvam AI Models Guide" data-url="sarvam-models.pdf" /> Sarvam AI</label>
-              </div>
-            </fieldset>
-
-            <div class="grid gap-3 lg:grid-cols-[1fr_1fr_auto]">
-              <div>
-                <label class="mb-1 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500" for="lead-email">Email</label>
-                <input id="lead-email" name="email" type="email" required placeholder="name@company.com" class="min-h-[48px] w-full rounded-full border border-violet-200 bg-white px-5 text-sm text-slate-900 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100" />
-              </div>
-              <div>
-                <label class="mb-1 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500" for="lead-name">Name / Company</label>
-                <input id="lead-name" name="name" type="text" placeholder="Optional" class="min-h-[48px] w-full rounded-full border border-violet-200 bg-white px-5 text-sm text-slate-900 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100" />
-              </div>
-              <div class="flex items-end">
-                <button type="submit" class="min-h-[48px] w-full rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">Send Request</button>
-              </div>
-            </div>
-            <p id="pdf-interest-message" class="hidden text-sm font-medium text-emerald-700">Your email client should open with the request. After sending, use the selected download buttons below.</p>
-            <p id="pdf-interest-error" class="hidden text-sm font-medium text-rose-700">Please select at least one PDF guide.</p>
-          </form>
-        </div>
       </div>
 
       <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -164,56 +129,56 @@
           <div class="inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">All-round AI</div>
           <h3 class="mt-5 text-2xl font-semibold">OpenAI Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">GPT-4o, o3, GPT-4o mini, o1, and GPT-4.5 selection guide.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="openai-models.pdf" data-download="OpenAI Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="openai-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-violet-700">Reasoning</div>
           <h3 class="mt-5 text-2xl font-semibold">Claude Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Claude Opus, Sonnet, and Haiku tiers for quality, balance, and speed.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="anthropic-models.pdf" data-download="Claude Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="anthropic-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">Enterprise</div>
           <h3 class="mt-5 text-2xl font-semibold">Gemini Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Gemini Ultra, Pro, Flash, and Nano for cloud and on-device AI.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="gemini-models.pdf" data-download="Gemini Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="gemini-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">Open Source</div>
           <h3 class="mt-5 text-2xl font-semibold">Meta AI Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Llama, vision, segmentation, and generative AI model guide.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="meta-models.pdf" data-download="Meta AI Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="meta-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-orange-700">Efficient AI</div>
           <h3 class="mt-5 text-2xl font-semibold">Mistral Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Mistral Large, Small, Codestral, Mixtral, NeMo, and Pixtral.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="mistral-models.pdf" data-download="Mistral Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="mistral-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">Qwen</div>
           <h3 class="mt-5 text-2xl font-semibold">Alibaba Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Qwen language, coding, math, vision, and audio model selection.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="alibaba-models.pdf" data-download="Alibaba Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="alibaba-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">Real-time</div>
           <h3 class="mt-5 text-2xl font-semibold">xAI Grok Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Grok, reasoning, vision, mini, Aurora, and production API guide.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="xai-models.pdf" data-download="xAI Grok Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="xai-models.pdf" download>Download PDF</a>
         </article>
 
         <article class="card-hover rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
           <div class="inline-flex rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-rose-700">Indic AI</div>
           <h3 class="mt-5 text-2xl font-semibold">Sarvam AI Models</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">Indic LLMs, speech recognition, TTS, translation, and APIs.</p>
-          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="sarvam-models.pdf" data-download="Sarvam AI Models Guide">Download PDF</a>
+          <a class="mt-6 inline-flex w-full justify-center rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700" href="sarvam-models.pdf" download>Download PDF</a>
         </article>
       </div>
     </section>
@@ -293,105 +258,5 @@
       </div>
     </div>
   </footer>
-    <script>
-    const interestForm = document.getElementById('pdf-interest-form');
-    const leadEmail = document.getElementById('lead-email');
-    const leadName = document.getElementById('lead-name');
-    const successMessage = document.getElementById('pdf-interest-message');
-    const errorMessage = document.getElementById('pdf-interest-error');
-    const downloadLinks = document.querySelectorAll('[data-download]');
-    const pdfCheckboxes = document.querySelectorAll('input[name="pdf"]');
-    let approvedDownloads = JSON.parse(localStorage.getItem('dataknobsApprovedDownloads') || '[]');
-
-    function setDownloadState() {
-      downloadLinks.forEach((link) => {
-        const title = link.dataset.download;
-        const isApproved = approvedDownloads.includes(title);
-        if (isApproved) {
-          link.textContent = 'Download PDF';
-          link.classList.remove('bg-slate-400', 'hover:bg-slate-500');
-          link.classList.add('bg-violet-600', 'hover:bg-violet-700');
-          link.setAttribute('download', '');
-          link.setAttribute('aria-label', 'Download ' + title);
-        } else {
-          link.textContent = 'Select + Send Request';
-          link.classList.remove('bg-violet-600', 'hover:bg-violet-700');
-          link.classList.add('bg-slate-400', 'hover:bg-slate-500');
-          link.removeAttribute('download');
-          link.setAttribute('aria-label', 'Select and send request for ' + title);
-        }
-      });
-    }
-
-    function syncCardsFromSelections() {
-      const selectedTitles = Array.from(pdfCheckboxes)
-        .filter((box) => box.checked)
-        .map((box) => box.value);
-      downloadLinks.forEach((link) => {
-        if (!approvedDownloads.includes(link.dataset.download) && selectedTitles.includes(link.dataset.download)) {
-          link.textContent = 'Ready to Request';
-        }
-      });
-    }
-
-    downloadLinks.forEach((link) => {
-      link.addEventListener('click', (event) => {
-        const title = link.dataset.download;
-        if (!approvedDownloads.includes(title)) {
-          event.preventDefault();
-          const matchingBox = Array.from(pdfCheckboxes).find((box) => box.value === title);
-          if (matchingBox) matchingBox.checked = true;
-          syncCardsFromSelections();
-          interestForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          leadEmail.focus();
-        }
-      });
-    });
-
-    pdfCheckboxes.forEach((box) => box.addEventListener('change', syncCardsFromSelections));
-
-    interestForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const selected = Array.from(pdfCheckboxes).filter((box) => box.checked);
-      if (!selected.length) {
-        errorMessage.classList.remove('hidden');
-        successMessage.classList.add('hidden');
-        return;
-      }
-      if (!leadEmail.checkValidity()) {
-        leadEmail.reportValidity();
-        return;
-      }
-
-      errorMessage.classList.add('hidden');
-      const selectedTitles = selected.map((box) => box.value);
-      const selectedUrls = selected.map((box) => '- ' + box.value + ' (' + box.dataset.url + ')');
-      approvedDownloads = Array.from(new Set([...approvedDownloads, ...selectedTitles]));
-      localStorage.setItem('dataknobsApprovedDownloads', JSON.stringify(approvedDownloads));
-      localStorage.setItem('dataknobsLeadEmail', leadEmail.value.trim());
-      setDownloadState();
-      successMessage.classList.remove('hidden');
-
-      const subject = 'PDF guide request from DataKnobs website';
-      const body = [
-        'Hello DataKnobs,',
-        '',
-        'I am interested in downloading these AI model PDF guides:',
-        '',
-        selectedUrls.join('
-'),
-        '',
-        'My email: ' + leadEmail.value.trim(),
-        'Name / Company: ' + (leadName.value.trim() || 'Not provided'),
-        '',
-        'Please follow up with relevant AI model selection resources.'
-      ].join('
-');
-
-      window.location.href = 'mailto:contact@dataknobs.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-
-    setDownloadState();
-  </script>
 </body>
 </html>

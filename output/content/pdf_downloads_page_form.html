@@ -123,39 +123,14 @@
         <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Choose a model family guide</h2>
         <p class="mt-4 text-lg leading-8 text-slate-600">Each PDF is a concise decision guide that explains model options, best-fit use cases, and practical selection guidance.</p>
         <div class="mt-8 rounded-[2rem] border border-violet-100 bg-violet-50 p-6">
-          <h3 class="text-xl font-semibold text-slate-900">Request selected PDFs</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600">Select the PDF guides you are interested in, enter your email, and send the request to DataKnobs. This version opens the visitor’s email client so you receive a lead/interest email before sharing the files.</p>
-          <form id="pdf-interest-form" class="mt-5 space-y-5">
-            <fieldset>
-              <legend class="mb-3 text-sm font-semibold text-slate-900">Select PDF guides</legend>
-              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="OpenAI Models Guide" data-url="openai-models.pdf" /> OpenAI</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Claude Models Guide" data-url="anthropic-models.pdf" /> Claude</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Gemini Models Guide" data-url="gemini-models.pdf" /> Gemini</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Meta AI Models Guide" data-url="meta-models.pdf" /> Meta AI</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Mistral Models Guide" data-url="mistral-models.pdf" /> Mistral</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Alibaba Qwen Models Guide" data-url="alibaba-models.pdf" /> Alibaba Qwen</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="xAI Grok Models Guide" data-url="xai-models.pdf" /> xAI Grok</label>
-                <label class="flex items-center gap-3 rounded-2xl border border-violet-100 bg-white px-4 py-3 text-sm font-medium text-slate-700"><input class="h-4 w-4 accent-violet-600" type="checkbox" name="pdf" value="Sarvam AI Models Guide" data-url="sarvam-models.pdf" /> Sarvam AI</label>
-              </div>
-            </fieldset>
-
-            <div class="grid gap-3 lg:grid-cols-[1fr_1fr_auto]">
-              <div>
-                <label class="mb-1 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500" for="lead-email">Email</label>
-                <input id="lead-email" name="email" type="email" required placeholder="name@company.com" class="min-h-[48px] w-full rounded-full border border-violet-200 bg-white px-5 text-sm text-slate-900 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100" />
-              </div>
-              <div>
-                <label class="mb-1 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500" for="lead-name">Name / Company</label>
-                <input id="lead-name" name="name" type="text" placeholder="Optional" class="min-h-[48px] w-full rounded-full border border-violet-200 bg-white px-5 text-sm text-slate-900 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100" />
-              </div>
-              <div class="flex items-end">
-                <button type="submit" class="min-h-[48px] w-full rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">Send Request</button>
-              </div>
-            </div>
-            <p id="pdf-interest-message" class="hidden text-sm font-medium text-emerald-700">Your email client should open with the request. After sending, use the selected download buttons below.</p>
-            <p id="pdf-interest-error" class="hidden text-sm font-medium text-rose-700">Please select at least one PDF guide.</p>
+          <h3 class="text-xl font-semibold text-slate-900">Enter your email to unlock downloads</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">We will use your email to share helpful DataKnobs AI resources. After submitting, all PDF download buttons will be enabled.</p>
+          <form id="email-gate-form" class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <label class="sr-only" for="download-email">Business email</label>
+            <input id="download-email" name="email" type="email" required placeholder="name@company.com" class="min-h-[48px] flex-1 rounded-full border border-violet-200 bg-white px-5 text-sm text-slate-900 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100" />
+            <button type="submit" class="rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">Unlock Downloads</button>
           </form>
+          <p id="email-gate-message" class="mt-3 hidden text-sm font-medium text-emerald-700">Thanks — downloads are unlocked.</p>
         </div>
       </div>
 
@@ -293,102 +268,64 @@
       </div>
     </div>
   </footer>
-    <script>
-    const interestForm = document.getElementById('pdf-interest-form');
-    const leadEmail = document.getElementById('lead-email');
-    const leadName = document.getElementById('lead-name');
-    const successMessage = document.getElementById('pdf-interest-message');
-    const errorMessage = document.getElementById('pdf-interest-error');
+  <script>
+    const emailForm = document.getElementById('email-gate-form');
+    const emailInput = document.getElementById('download-email');
+    const emailMessage = document.getElementById('email-gate-message');
     const downloadLinks = document.querySelectorAll('[data-download]');
-    const pdfCheckboxes = document.querySelectorAll('input[name="pdf"]');
-    let approvedDownloads = JSON.parse(localStorage.getItem('dataknobsApprovedDownloads') || '[]');
+    let downloadsUnlocked = localStorage.getItem('dataknobsDownloadsUnlocked') === 'true';
+    let pendingDownload = null;
 
     function setDownloadState() {
       downloadLinks.forEach((link) => {
-        const title = link.dataset.download;
-        const isApproved = approvedDownloads.includes(title);
-        if (isApproved) {
+        if (downloadsUnlocked) {
           link.textContent = 'Download PDF';
           link.classList.remove('bg-slate-400', 'hover:bg-slate-500');
           link.classList.add('bg-violet-600', 'hover:bg-violet-700');
           link.setAttribute('download', '');
-          link.setAttribute('aria-label', 'Download ' + title);
+          link.setAttribute('aria-label', 'Download ' + link.dataset.download);
         } else {
-          link.textContent = 'Select + Send Request';
+          link.textContent = 'Enter Email to Download';
           link.classList.remove('bg-violet-600', 'hover:bg-violet-700');
           link.classList.add('bg-slate-400', 'hover:bg-slate-500');
           link.removeAttribute('download');
-          link.setAttribute('aria-label', 'Select and send request for ' + title);
+          link.setAttribute('aria-label', 'Enter email to download ' + link.dataset.download);
         }
       });
     }
 
-    function syncCardsFromSelections() {
-      const selectedTitles = Array.from(pdfCheckboxes)
-        .filter((box) => box.checked)
-        .map((box) => box.value);
-      downloadLinks.forEach((link) => {
-        if (!approvedDownloads.includes(link.dataset.download) && selectedTitles.includes(link.dataset.download)) {
-          link.textContent = 'Ready to Request';
-        }
-      });
+    function unlockDownloads(email) {
+      downloadsUnlocked = true;
+      localStorage.setItem('dataknobsDownloadsUnlocked', 'true');
+      localStorage.setItem('dataknobsDownloadEmail', email);
+      setDownloadState();
+      emailMessage.classList.remove('hidden');
     }
 
     downloadLinks.forEach((link) => {
       link.addEventListener('click', (event) => {
-        const title = link.dataset.download;
-        if (!approvedDownloads.includes(title)) {
+        if (!downloadsUnlocked) {
           event.preventDefault();
-          const matchingBox = Array.from(pdfCheckboxes).find((box) => box.value === title);
-          if (matchingBox) matchingBox.checked = true;
-          syncCardsFromSelections();
-          interestForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          leadEmail.focus();
+          pendingDownload = link.getAttribute('href');
+          emailInput.focus();
+          document.getElementById('email-gate-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       });
     });
 
-    pdfCheckboxes.forEach((box) => box.addEventListener('change', syncCardsFromSelections));
-
-    interestForm.addEventListener('submit', (event) => {
+    emailForm.addEventListener('submit', (event) => {
       event.preventDefault();
-      const selected = Array.from(pdfCheckboxes).filter((box) => box.checked);
-      if (!selected.length) {
-        errorMessage.classList.remove('hidden');
-        successMessage.classList.add('hidden');
+      const email = emailInput.value.trim();
+      if (!emailInput.checkValidity()) {
+        emailInput.reportValidity();
         return;
       }
-      if (!leadEmail.checkValidity()) {
-        leadEmail.reportValidity();
-        return;
+      unlockDownloads(email);
+      if (pendingDownload) {
+        const downloadUrl = pendingDownload;
+        pendingDownload = null;
+        window.location.href = downloadUrl;
       }
-
-      errorMessage.classList.add('hidden');
-      const selectedTitles = selected.map((box) => box.value);
-      const selectedUrls = selected.map((box) => '- ' + box.value + ' (' + box.dataset.url + ')');
-      approvedDownloads = Array.from(new Set([...approvedDownloads, ...selectedTitles]));
-      localStorage.setItem('dataknobsApprovedDownloads', JSON.stringify(approvedDownloads));
-      localStorage.setItem('dataknobsLeadEmail', leadEmail.value.trim());
-      setDownloadState();
-      successMessage.classList.remove('hidden');
-
-      const subject = 'PDF guide request from DataKnobs website';
-      const body = [
-        'Hello DataKnobs,',
-        '',
-        'I am interested in downloading these AI model PDF guides:',
-        '',
-        selectedUrls.join('
-'),
-        '',
-        'My email: ' + leadEmail.value.trim(),
-        'Name / Company: ' + (leadName.value.trim() || 'Not provided'),
-        '',
-        'Please follow up with relevant AI model selection resources.'
-      ].join('
-');
-
-      window.location.href = 'mailto:contact@dataknobs.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
 
     setDownloadState();
