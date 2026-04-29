@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View PDF | DataKnobs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet" />
+  <style>
+    body { margin:0; font-family: Inter, sans-serif; background:#0f172a; }
+    .topbar { background:white; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; }
+    .viewer { height: calc(100vh - 64px); }
+    iframe { width:100%; height:100%; border:none; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div style="font-weight:600; color:#4c1d95;">DataKnobs PDF Viewer</div>
+  <a href="javascript:history.back()" style="color:#6d28d9; font-size:14px;">← Back</a>
+</div>
+
+<div class="viewer">
+  <iframe id="pdfFrame"></iframe>
+</div>
+
+<script>
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  const pdfUrl = getQueryParam('file');
+
+  const allowedFiles = [
+    'openai-models.pdf',
+    'anthropic-models.pdf',
+    'gemini-models.pdf',
+    'meta-models.pdf',
+    'mistral-models.pdf',
+    'alibaba-models.pdf',
+    'xai-models.pdf',
+    'sarvam-models.pdf'
+  ];
+
+  if (pdfUrl && allowedFiles.includes(pdfUrl)) {
+    document.getElementById('pdfFrame').src = pdfUrl;
+  } else {
+    document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;color:white;font-size:20px;">Invalid or unauthorized PDF</div>';
+  }
+</script>
+
+</body>
+</html>
